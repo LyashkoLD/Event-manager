@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event Manager", "Event Manager\Event Manager.csproj", "{CA32756D-AAC7-453E-837A-D66044AB49E1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LLyashko.EvantManager.Models", "LLyashko.EvantManager.Models\LLyashko.EvantManager.Models.csproj", "{FAE128DA-DC3A-409E-B545-BD64825501A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CA32756D-AAC7-453E-837A-D66044AB49E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA32756D-AAC7-453E-837A-D66044AB49E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA32756D-AAC7-453E-837A-D66044AB49E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAE128DA-DC3A-409E-B545-BD64825501A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAE128DA-DC3A-409E-B545-BD64825501A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAE128DA-DC3A-409E-B545-BD64825501A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAE128DA-DC3A-409E-B545-BD64825501A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
