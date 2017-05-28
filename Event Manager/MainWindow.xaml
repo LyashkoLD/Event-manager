@@ -5,8 +5,101 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Event_Manager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="768" Width="1366">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="50*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px"/>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="50px"/>
+        </Grid.RowDefinitions>
+        <Label Name="LabelGuests"
+               Grid.Row="0" 
+               Grid.Column="0"
+               HorizontalAlignment="Center" 
+               VerticalContentAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="30">
+            Гости
+        </Label>
+        <DataGrid Name="DataGridGuests"
+                  Grid.Column="0"
+                  Grid.Row="1"
+                  HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  HorizontalContentAlignment="Center">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" 
+                                    IsReadOnly="True" 
+                                    Width="25*">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                    Value="Center" />
+                            <Setter Property="Height"
+                                    Value="30" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" 
+                                    IsReadOnly="True"
+                                    Width="25*">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                    Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Телефон" 
+                                    IsReadOnly="True" 
+                                    Width="25*">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                    Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Почта" 
+                                    IsReadOnly="True"
+                                    Width="25*">
+                    <DataGridTextColumn.HeaderStyle>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="HorizontalContentAlignment"
+                                    Value="Center" />
+                        </Style>
+                    </DataGridTextColumn.HeaderStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+        <StackPanel Name="SPGuestsButtons"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Name="ButtonAddGuest"
+                    Width="90"
+                    Height="30" Margin="1">
+                <Label Name="LabelAddGuest"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                    Добавить
+                </Label>
+            </Button>
+            <Button Name="ButtonRemoveGuest" 
+                    Width="{Binding ActualWidth, ElementName=ButtonAddGuest}" 
+                    Height="{Binding ActualHeight, ElementName=ButtonAddGuest}" Margin="{Binding Margin, ElementName=ButtonAddGuest}">
+                <Label Name="LabelRemoveGuest" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=LabelAddGuest}" VerticalAlignment="{Binding VerticalAlignment, ElementName=LabelAddGuest}">
+                    Удалить
+                </Label>
+            </Button>
+        </StackPanel>
     </Grid>
 </Window>
