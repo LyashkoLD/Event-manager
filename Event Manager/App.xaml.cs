@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Event_Manager
+namespace LLyashko.Event_Manager
 {
     /// <summary>
     /// Interaction logic for App.xaml

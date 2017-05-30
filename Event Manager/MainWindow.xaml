@@ -1,9 +1,9 @@
-﻿<Window x:Class="Event_Manager.MainWindow"
+﻿<Window x:Class="LLyashko.Event_Manager.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Event_Manager"
+        xmlns:local="clr-namespace:LLyashko.Event_Manager"
         mc:Ignorable="d"
         Title="MainWindow" Height="768" Width="1366">
     <Grid>
@@ -33,7 +33,7 @@
                   HorizontalContentAlignment="Center">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Имя" 
-                                    IsReadOnly="True" 
+                                    IsReadOnly="True"                                     
                                     Width="25*">
                     <DataGridTextColumn.HeaderStyle>
                         <Style TargetType="DataGridColumnHeader">
