@@ -7,6 +7,8 @@ namespace LLyashko.EvantManager.Models
     [ImplementPropertyChanged]
     public class Event : INotifyPropertyChanged
     {
+        Guid Id { get; set; }
+
         public DateTime Date { get; set; }
 
         public string Address { get; set; }

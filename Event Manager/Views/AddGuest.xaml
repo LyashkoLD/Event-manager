@@ -1,0 +1,77 @@
+﻿<Window x:Name="window" x:Class="LLyashko.Event_Manager.AddGuest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LLyashko.Event_Manager"
+        mc:Ignorable="d"
+        Title="AddGuest" Height="300" Width="300">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Name="FirstRow" Height="31*"/>
+            <RowDefinition Height="{Binding Height, ElementName=FirstRow}"/>
+            <RowDefinition Height="{Binding Height, ElementName=FirstRow}"/>
+            <RowDefinition Height="{Binding Height, ElementName=FirstRow}"/>
+            <RowDefinition Height="{Binding Height, ElementName=FirstRow}"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name ="FirsrColumn" Width="75*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Name="LabelName" Margin="5" VerticalAlignment="Center">
+            Имя:
+        </Label>
+        <TextBox Name="TextBoxName" Grid.Column="1" Margin="5" VerticalAlignment="Center"/>
+
+        <Label Name="LabelSurname"
+               Grid.Row="1"
+               Margin="{Binding Margin, ElementName=LabelName}" 
+               VerticalAlignment="{Binding VerticalAlignment, ElementName=LabelName}">
+            Фамилия:
+        </Label>
+        <TextBox Name="TextBoxSurName"
+                 Grid.Column="1" Grid.Row="1"
+                 Margin="{Binding Margin, ElementName=TextBoxName}" 
+                 VerticalAlignment="{Binding VerticalAlignment, ElementName=TextBoxName}"/>
+
+        <Label Name="LabelPhoneNumber"
+               Grid.Row="2"
+               Margin="{Binding Margin, ElementName=LabelName}" 
+               VerticalAlignment="{Binding VerticalAlignment, ElementName=LabelName}">
+            Номер:
+        </Label>
+        <TextBox Name="TextBoxPhoneNumber"
+                 Grid.Column="1" Grid.Row="2"
+                 Margin="{Binding Margin, ElementName=TextBoxName}" 
+                 VerticalAlignment="{Binding VerticalAlignment, ElementName=TextBoxName}"/>
+
+        <Label Name="LabelMailAddress"
+               Grid.Row="3"
+               Margin="{Binding Margin, ElementName=LabelName}" 
+               VerticalAlignment="{Binding VerticalAlignment, ElementName=LabelName}">
+            Номер:
+        </Label>
+        <TextBox Name="TextBoxMailAddress"
+                 Grid.Column="1" Grid.Row="3"
+                 Margin="{Binding Margin, ElementName=TextBoxName}" 
+                 VerticalAlignment="{Binding VerticalAlignment, ElementName=TextBoxName}"/>
+
+        <StackPanel Name="StackPanelButtons" 
+                    Grid.Column="1" Grid.Row="4"
+                    Margin="5,5,5,5" Orientation="Horizontal"
+                    HorizontalAlignment="Right" Width="190">
+            <Button Name="ButtonOk" 
+                    HorizontalAlignment="Center"
+                    Margin="5" Width="84">
+                Ok
+            </Button>
+            <Button Name="ButtonCancel" 
+                    HorizontalAlignment="{Binding HorizontalAlignment, ElementName=ButtonOk}"
+                    Margin="{Binding Margin, ElementName=ButtonOk}"
+                    Width="{Binding Width, ElementName=ButtonOk}">
+                Cancel
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
